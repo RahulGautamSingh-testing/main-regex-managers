@@ -1,11 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["regex"],
+  "enabledManagers": ["custom.regex"],
   "packageRules": [
     {
-      "matchManagers": ["regex"],
-      "groupName": "custom-regex-deps",
-      "recreateWhen": "never"
+      "matchManagers": ["custom.regex"],
+      "groupName": "custom-regex-deps"
     }
   ],
   "regexManagers": [
@@ -18,6 +17,5 @@
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
    ],
-  "configMigration": true,
   "dependencyDashboard": true
 }
